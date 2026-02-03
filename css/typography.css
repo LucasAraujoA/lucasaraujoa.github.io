@@ -1,0 +1,109 @@
+@import url("colors.css");
+
+h1, h2, .text-display {
+  font-weight: 600;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+  margin-top: 5rem;
+}
+
+h2 {
+  margin-top: 4rem;
+}
+
+h3 {
+  color: var(--grey-300);
+  margin-top: 3rem;
+}
+
+h4 {
+  color: var(--grey-500);
+  margin-top: 2rem;
+}
+
+h5 {
+  color: var(--grey-500);
+  margin-top: 1.5rem;
+}
+
+h6 {
+  text-align: left;
+  font-weight: 600;
+  color: var(--la-blue-light);
+  margin-top: 1rem;
+}
+
+p {
+  font-family: 'Kanit', sans-serif;
+  color: var(--grey-400);
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.6;
+  margin: 1rem 0 1rem 0;
+}
+
+.big-text {
+  font-size: 7.5rem;
+  font-weight: 900;
+  color: white;
+  margin: 0 !important;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.big-bio {
+  font-size: 2rem;
+  margin: 0 !important;
+}
+
+/*--------- ESTILIZAÇÃO DO <A> COM LINKS ------------*/
+
+a {
+  color: var(--grey-400) !important;
+}
+
+a:hover {
+  color: var(--la-cyan-light) !important;
+}
+
+/*--------- LISTA DE BIO ------------*/
+span {
+  color: var(--grey-300);
+  padding: 0 !important;
+}
+
+.bio-list li span {
+  display: flex;
+  flex-direction: column; /* força quebra para baixo */
+  margin-bottom: 1rem;
+}
+
+.bio-list strong {
+  color: var(--la-cyan-dark);
+  text-transform: uppercase;
+}
+
+.bio-list em {
+  color: var(--grey-600);
+  font-weight: 400;
+  font-style: normal;
+  display: inline;
+  padding: 0;
+}
+
+.bio-title {
+  color: var(--grey-300);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.personal-info-em {
+  color: var(--grey-500);
+  text-transform: uppercase;
+}

@@ -1,0 +1,106 @@
+/* 1. Importação com caminho relativo explícito */
+@import url("./colors.css");
+
+/* 2. Configurações Gerais e Reset de Herança do Bootstrap */
+.table-responsive {
+    background-color: transparent !important;
+    border: none !important;
+    overflow-x: auto;
+}
+
+/* Força a transparência nas células, onde o Bootstrap aplica o fundo branco */
+.table, 
+.table > :not(caption) > * > * {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: inherit;
+    border-bottom-color: var(--grey-800) !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Kanit', sans-serif;
+    /* Bordas de destaque do seu design */
+    border-top: 1px solid var(--grey-800) !important;
+    border-bottom: 1px solid var(--grey-800) !important;
+    margin-bottom: 2rem;
+}
+
+th {
+    padding: 1.5rem 0 0.5rem;
+    font-weight: 400;
+    color: var(--grey-700) !important;
+    text-align: left;
+    text-transform: lowercase;
+    border-bottom: none !important;
+}
+
+td {
+    color: var(--grey-400) !important;
+    text-align: left;
+    padding: 0.5rem 0 1.5rem;
+    line-height: 1.4;
+    border-bottom: none !important;
+    vertical-align: top;
+}
+
+/* Links dentro da tabela */
+td a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+/* Efeito de destaque no hover */
+td:hover {
+    color: cyan !important;
+}
+
+/* 3. Comportamento Responsivo (Quebra em Lista Vertical) */
+@media (max-width: 768px) {
+    /* Transforma a tabela em blocos */
+    .table, 
+    .table thead, 
+    .table tbody, 
+    .table th, 
+    .table td, 
+    .table tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* Esconde o cabeçalho visualmente mas mantém para leitores de tela */
+    .table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table tr {
+        border-bottom: 1px solid var(--grey-800);
+        padding: 1rem 0;
+    }
+
+    .table td {
+        position: relative;
+        padding-left: 40% !important; /* Espaço para o rótulo */
+        text-align: left !important;
+        padding-bottom: 0.75rem;
+        min-height: 2rem;
+    }
+
+    /* Insere o nome da coluna via data-label */
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 35%;
+        font-weight: 500;
+        color: var(--grey-700);
+        text-transform: lowercase;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}

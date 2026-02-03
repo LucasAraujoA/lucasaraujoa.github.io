@@ -1,0 +1,185 @@
+@import url("colors.css");
+
+body > .container-xxl,
+header .container-xxl {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+.project-page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+#projects {
+  max-width: 1320px;
+  margin: 0 auto !important;
+}
+
+img {
+  max-height: 45rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo {
+  height: 3vh;
+  width: auto;
+}
+
+/*------ LIST STYLES ----------*/
+ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  padding-left: 0;
+  color: var(--grey-400); 
+}
+
+li {
+  margin: 0.5rem 0 0.5rem 0;
+  line-height: 130%;
+}
+
+li::marker {
+  color: var(--grey-600);   /* cor só do bullet */
+}
+
+
+/*------ DIVISOR ----------*/
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--grey-600);
+  margin: 2rem 0;
+}
+
+
+@keyframes shadow-dance {
+  0%, 100% {
+    text-shadow: 2px 2px 0 cyan, 4px 4px 0 blue;
+  }
+  50% {
+    text-shadow: -2px -2px 0 cyan, -4px -4px 0 blue;
+  }
+}
+
+@media (max-width: 991.98px) {
+  p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767.98px) {
+  p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+}
+
+.presentation {
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: cyan;
+}
+
+.ratio-9x16 {
+  aspect-ratio: 9 / 16;
+  max-height: 30rem;
+  width: auto;
+}
+
+/*--------- HERO IMAGE ----------------*/
+.foto-hero {
+  max-width: 220px;      /* ajuste conforme o design */
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25); /* opcional */
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;          /* ocupa toda a largura da viewport */
+  height: 20rem;
+  transform: translateX(-50%);
+  object-fit: cover;     /* sem deformar */
+  z-index: 0;
+}
+
+.hero-strip {
+    /* 1. Faz a div ocupar 100% da largura da janela, ignorando o pai */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    /* 2. Define a altura e o comportamento visual */
+    height: 20rem; /* Ajuste conforme necessário */
+    background-color: var(--grey-950); /* Cor da faixa */
+    overflow: hidden;
+    
+    /* 3. Coloca a faixa atrás de tudo */
+    z-index: -1;
+}
+
+/* Conteúdo sobreposto deve ficar acima da imagem */
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.foto-hero {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
+}
+
+.hero-text{
+  margin-top: -8.7rem;
+}
+
+
+/*--- SOFTWARE BOX ----*/
+
+.progress-bar {
+  background-color: var(--grey-800); /* cor desejada */
+}
+
+.progress {
+  background-color: var(--grey-900);
+}
+
+.softwares-box {
+  align-items: center;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.softwares-box span {
+  padding: 0;
+}
