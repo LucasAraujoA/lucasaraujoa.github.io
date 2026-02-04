@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (container) {
     // Nomes conforme aparecem nos seus arquivos após o "card_"
     const cardNames = [
-      'games-hub', 'decontos-library', 'gamezilla', 'cuca-catch', 
+      'games-hub', 'descontos-library', 'gamezilla', 'cuca-catch', 
       'einsteroids', 'dodging-for-treasure', 'dinnie-app', 'plexo-arte', 
       'harry-potter', 'strawberry-popsicles', 'milejao', 'riccch-ladies', 'pikachu'
     ];
