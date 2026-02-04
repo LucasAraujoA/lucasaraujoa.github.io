@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-   
   // 1. CARREGAR HEADER
   const headerElement = document.getElementById("header");
   if (headerElement) {
     // Caminho absoluto para a pasta de componentes
+
     fetch('/components/header.html')
       .then(response => response.text())
       .then(html => {
@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Caminho absoluto para a pasta de componentes
     fetch('/components/footer.html')
       .then(response => response.text())
+
       .then(html => {
         footerElement.innerHTML = html;
       })
       .catch(error => console.error('Erro ao carregar footer:', error));
   }
-  
   // 3. CARREGAR CARDS
   const container = document.getElementById("cards-container");
   if (container) {
