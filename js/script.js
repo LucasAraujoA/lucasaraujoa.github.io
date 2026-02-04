@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   
-  // Função auxiliar para evitar repetição de código (DRY - Don't Repeat Yourself)
+  // Função para carregar componentes simples (Header/Footer)
   function loadComponent(elementId, path) {
     const element = document.getElementById(elementId);
     if (element) {
-      // USANDO CAMINHO RELATIVO: Removida a "/" inicial
       fetch(path)
         .then(response => {
           if (!response.ok) throw new Error(`Erro ao carregar: ${path}`);
@@ -17,27 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // 1. CARREGAR HEADER (Caminho corrigido para relativo)
+  // 1. Carregar Header e Footer (Caminhos relativos sem a barra inicial)
   loadComponent("header", "components/header.html");
-
-  // 2. CARREGAR FOOTER (Caminho corrigido para relativo)
   loadComponent("footer-placeholder", "components/footer.html");
 
-  // 3. CARREGAR CARDS
+  // 2. Carregar Cards
   const container = document.getElementById("cards-container");
   if (container) {
+    // Nomes conforme aparecem nos seus arquivos após o "card_"
     const cardNames = [
       'games-hub', 'decontos-library', 'gamezilla', 'cuca-catch', 
       'einsteroids', 'dodging-for-treasure', 'dinnie-app', 'plexo-arte', 
       'harry-potter', 'strawberry-popsicles', 'milejao', 'riccch-ladies', 'pikachu'
     ];
     
-    // Usamos um Loop para carregar os cards
     cardNames.forEach(name => {
-      // Caminho relativo garantindo que o GitHub ache a pasta de componentes
-      fetch(`components/card-${name}.html`)
+      // AJUSTE AQUI: Usando o padrão "card_" + nome + ".html"
+      const filePath = `components/card_${name}.html`;
+      
+      fetch(filePath)
         .then(response => {
-          if (!response.ok) throw new Error(`Card não encontrado: ${name}`);
+          if (!response.ok) throw new Error(`Não encontrado: ${filePath}`);
           return response.text();
         })
         .then(html => {
