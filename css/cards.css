@@ -17,7 +17,13 @@
   font-weight: 800;
   font-size: 2rem;
   color: white !important;
+  text-decoration: none;
 }
+
+.card-title a {
+  text-decoration: none;
+}
+
 
 .card-text {
   color: var(--grey-400);

@@ -8,8 +8,9 @@
 
 .project-tags .tag {
   background-color: var(--la-blue-dark);
-  color: var(--la-cyan-light);
+  color: white !important;
   padding: 5px 12px;
+  font-weight: 500;
   border-radius: 12px;
   font-size: 0.9rem;
   text-decoration: none;
@@ -18,7 +19,7 @@
 
 .project-tags .tag:hover {
   background-color: var(--la-cyan-light);
+  font-weight: 500;
   color: var(--la-blue-dark) !important;
-  font-weight: 900;
   transform: translateY(-2px);
 }
