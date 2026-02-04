@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 3. CARREGAR CARDS
   const container = document.getElementById("cards-container");
   if (container) {
-    const cardNames = ['gamesHub', 'decontosLibrary', 'gamezilla', 'cucaCatch', 'einsteroids', 'dodgingForTreasure', 'dinnieApp', 'plexoArte', 'harryPotter', 'strawberryPopsicles', 'milejao', 'riccchLadies', 'pikachu'];
+    const cardNames = ['games-hub', 'decontos-library', 'gamezilla', 'cuca-catch', 'einsteroids', 'dodging-for-treasure', 'dinnie-app', 'plexo-arte', 'harry-potter', 'strawberry-popsicles', 'milejao', 'riccch-ladies', 'pikachu'];
     
     cardNames.forEach(name => {
       // Caminho absoluto para os cards
