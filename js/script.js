@@ -17,8 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // 1. Carregar Header e Footer (Caminhos relativos sem a barra inicial)
-  loadComponent("header", "components/header.html");
-  loadComponent("footer-placeholder", "components/footer.html");
+  // 1. Carregar Header e Footer (ajusta caminho para páginas em /projects)
+  const basePath = window.location.pathname.includes('/projects/') ? '../' : '';
+  loadComponent("header", `${basePath}components/header.html`);
+  loadComponent("footer-placeholder", `${basePath}components/footer.html`);
 
   // 2. Carregar Cards
   const container = document.getElementById("cards-container");
