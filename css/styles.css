@@ -17,7 +17,7 @@ body {
 .project-page {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 1rem !important;
 }
 
 #projects {
